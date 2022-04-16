@@ -1,25 +1,44 @@
-<script type="text/javascript">
-    let lesson = {{ lesson | tojson }}
-    
-    console.log(lesson)
-</script>
-
 {% extends "base.html" %}
 
-{% block content %}
 
+{% block content %}
+<script> var lesson = {{ lesson | tojson }} </script>
+
+<script src = "{{url_for('static', filename = 'learn.js')}}"></script>
+
+    <!-- Lesson Header-->
     <div class = "row titlerow">
         <div class = "col-md-12">
-            {{ lesson.subgroup }}
+            {{ lesson.header }}
         </div>
         
     </div>
 
+    <!-- Main Lesson Text Content-->
     <div class = "row">
         <div class = "col-md-12">
             <pre>{{ lesson.text }}</pre>
         </div>
-        
+    </div>
+
+    <!-- Div to display media content -->
+    <div class = "row">
+        <div class = "col-md-12">
+            {% for media in lesson.media %}
+                <img src = "{{ media }}">
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Empty spaces for dynamically created button navigation -->
+    <div class = "row">
+        <div class = "col-md-2" id = "prevButton">
+        </div>
+        <div class = "col-md-8"></div>
+        <div class = "col-md-2" id = "nextButton">
+
+        </div>
     </div>
 
 {% endblock %}
+
