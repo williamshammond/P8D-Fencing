@@ -1,7 +1,36 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <div class = "row" id="homerow">
+        <div class = "col-md-12">How to Score in Sabre Fencing</div>
+    </div>
 
+    <div class = "row">
+        <div class = "col-md-4">
+            <a href = "{{url_for('learn', id = 1)}}">
+                <div class = "homepageImgHolder"> 
+                    <img class = "homepage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/cartoonFencers.png')}}">
+                </div>
+                Basics
+            </a>
+        </div>
+        <div class = "col-md-4">
+            <a href = "{{url_for('learn', id = 9)}}">
+                <div class = "homepageImgHolder"> 
+                    <img class = "homepage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/cartoonBlocking.png')}}">
+                </div>
+                Moves
+            </a>
+        </div>
+        <div class = "col-md-4">
+            <a href = "{{url_for('learn', id = 14)}}">
+                <div class = "homepageImgHolder"> 
+                    <img class = "homepage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/tiedFencers.jpeg')}}">
+                </div>
+                Priority
+            </a>
+        </div>
+    </div>
 
 
 {% endblock %}
