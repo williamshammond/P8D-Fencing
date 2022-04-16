@@ -5,7 +5,7 @@ from random import random, randrange
 from unittest import result
 from flask import Flask
 from flask import render_template
-from flask import Response, request, jsonify
+from flask import Response, request, jsonify, url_for
 from matplotlib.pyplot import title
 from pandas import to_datetime
 app = Flask(__name__)
@@ -65,7 +65,7 @@ lessons = {
         "text":"Each round is called a bout\nThe bout begins with the referee (called a president or director) saying: \"On Guard ... Ready?... Fence!\"\nOne fencer will always get a point after each bout",
         "media":"https://imgur.com/E34QKn0",
         "keywords":["bout"],
-        "next_lesson":"8",
+        "next_lesson":"menu",
     },
     "8":{
         "lesson_id":"8",
@@ -73,7 +73,7 @@ lessons = {
         "text":"Scoring Systems varies per competition\nAt the collegiate level, whoever wins 5 bouts first is the winner\nIn the Olympics, the match is over after a fencer wins 15 bouts",
         "media":"https://imgur.com/5PAH5u3",
         "keywords":["wins 5", "15 bouts"],
-        "next_lesson":"9",
+        "next_lesson":"menu",
     },
     "9":{
         "lesson_id":"9",
@@ -113,7 +113,7 @@ lessons = {
         "text":"A beat occurs when the attacker intentionally hits their opponent\'s blade out of line, opening space for them to attack",
         "media":"https://imgur.com/2CdF4n4",
         "keywords":["beat"],
-        "next_lesson":"14",
+        "next_lesson":"menu",
     },
     "14":{
         "lesson_id":"14",
@@ -334,18 +334,18 @@ quizes = {
 }
 
 @app.route('/')
-def welcome():
+def home():
     return render_template('home.html')
 
-@app.route('/learning/<id>')
-def lesson(id):
+@app.route('/learn/<id>')
+def learn(id):
     lesson = lessons[id]
-    return render_template('learning.html', lesson = lesson)
+    return render_template('learn.html', lesson = lesson)
 
-@app.route('/quiz/<id>')
-def quiz(id):
+@app.route('/test/<id>')
+def test(id):
     question = quizes[id]
-    return render_template('quiz.html', question = question)
+    return render_template('test.html', question = question)
 
 if __name__ == '__main__':
    app.run(debug = True)
