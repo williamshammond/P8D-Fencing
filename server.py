@@ -1,3 +1,20 @@
+from email.utils import parseaddr
+import json
+from pydoc import synopsis
+from random import random, randrange
+from unittest import result
+from flask import Flask
+from flask import render_template
+from flask import Response, request, jsonify
+from matplotlib.pyplot import title
+from pandas import to_datetime
+
+app = Flask(__name__)
+
+lessons = {
+    
+}
+
 quiz = {
     "1":{
         "question_number":"1",
@@ -5,7 +22,7 @@ quiz = {
         "subgroup":"basics",
         "question":"What sword is pictured above?",
         "media":"https://imgur.com/mCj2HLo",
-        "options":["Sabre", "Epée", "Foil"],
+        "options":["Sabre", "Epee", "Foil"],
         "answer":"Sabre",
         "answer_idx": "0",
         "next_question":"2",
@@ -157,3 +174,16 @@ quiz = {
         "next_question":"End",
     },            
 }
+
+@app.route('/lesson/<id>')
+def lesson(id):
+    lesson = lessons[id]
+    return render_template('lesson.html', lesson = lesson)
+
+@app.route('/quiz/<id>')
+def quiz(id):
+    question = quiz[id]
+    return render_template('quiz.html', question = question) 
+
+if __name__ == '__main__':
+   app.run(debug = True)
