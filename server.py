@@ -8,14 +8,172 @@ from flask import render_template
 from flask import Response, request, jsonify
 from matplotlib.pyplot import title
 from pandas import to_datetime
-
 app = Flask(__name__)
 
 lessons = {
-    
+    "1":{
+        "lesson_id":"1",
+        "subgroup":"basics",
+        "text":"Fencing is always one against one\nFencers must wear protective attire to minimise the chance of serious injury. This includes:\n1. Mask\n2. Fencing jacket\n3. Pads\n4. Glove on the weapon hand",
+        "media":"https://imgur.com/IdvtQay",
+        "keywords":["one against one","protective attire"],
+        "next_lesson":"2",
+    },
+    "2":{
+        "lesson_id":"2",
+        "subgroup":"basics",
+        "text":"Mask",
+        "media":"https://imgur.com/LlWewFM",
+        "keywords":["Mask"],
+        "next_lesson":"3",
+    },
+    "3":{
+        "lesson_id":"3",
+        "subgroup":"basics",
+        "text":"Fencing Jacket",
+        "media":"https://imgur.com/Hly0hZS",
+        "keywords":["Fencing Jacket"],
+        "next_lesson":"3",
+    },
+    "4":{
+        "lesson_id":"4",
+        "subgroup":"basics",
+        "text":"Gloves",
+        "media":"https://imgur.com/JWkW4w9",
+        "keywords":["Gloves"],
+        "next_lesson":"5",
+    },  
+    "5":{
+        "lesson_id":"5",
+        "subgroup":"basics",
+        "text":"There are three kinds of swords in the sport of fencing:\na. the epee - the heaviest sword,\nb. the foil - a light thrusting weapon\nc. the sabre - a cutting and thrusting weapon derived from the cavalry sword\nThroughout this tutorial we will be focusing on sabre fencing!",
+        "media":"https://imgur.com/43mEIQV",
+        "keywords":["Throughout this tutorial we will be focusing on sabre fencing!"],
+        "next_lesson":"6",
+    },
+    "6":{
+        "lesson_id":"6",
+        "subgroup":"basics",
+        "text":"Sabre",
+        "media":"https://imgur.com/jkRgfx5",
+        "keywords":["Sabre"],
+        "next_lesson":"7",
+    },
+    "7":{
+        "lesson_id":"7",
+        "subgroup":"basics",
+        "text":"Each round is called a bout\nThe bout begins with the referee (called a president or director) saying: \"On Guard ... Ready?... Fence!\"\nOne fencer will always get a point after each bout",
+        "media":"https://imgur.com/E34QKn0",
+        "keywords":["bout"],
+        "next_lesson":"8",
+    },
+    "8":{
+        "lesson_id":"8",
+        "subgroup":"basics",
+        "text":"Scoring Systems varies per competition\nAt the collegiate level, whoever wins 5 bouts first is the winner\nIn the Olympics, the match is over after a fencer wins 15 bouts",
+        "media":"https://imgur.com/5PAH5u3",
+        "keywords":["wins 5", "15 bouts"],
+        "next_lesson":"9",
+    },
+    "9":{
+        "lesson_id":"9",
+        "subgroup":"moves",
+        "text":"A strike is the initial offensive action made by extending the arm and continuously threatening the opponent's target",
+        "media":"https://imgur.com/pLG98vy",
+        "keywords":["strike"],
+        "next_lesson":"10",
+    },
+    "10":{
+        "lesson_id":"10",
+        "subgroup":"moves",
+        "text":"A parry occurs when a fencer blocks an attack with their sabre as shown below",
+        "media":"https://imgur.com/UhzFfjQ",
+        "keywords":["blocks"],
+        "next_lesson":"11",
+    },
+    "11":{
+        "lesson_id":"11",
+        "subgroup":"moves",
+        "text":"A parry-riposte occurs when the defender fencer parries an opponent\'s attack and counterattacks by hitting the target",
+        "media":"https://imgur.com/48KRKbZ",
+        "keywords":["parry-riposte", "parries", "counterattacks"],
+        "next_lesson":"12",
+    },
+    "12":{
+        "lesson_id":"12",
+        "subgroup":"moves",
+        "text":"A fencer can establish point-in-line by extending their blade straight forward from their shoulder while their opponent is not within attacking range",
+        "media":"https://imgur.com/lNNs3Iz",
+        "keywords":["point-in-line"],
+        "next_lesson":"13",
+    },
+    "13":{
+        "lesson_id":"13",
+        "subgroup":"moves",
+        "text":"A beat occurs when the attacker intentionally hits their opponent\'s blade out of line, opening space for them to attack",
+        "media":"https://imgur.com/2CdF4n4",
+        "keywords":["beat"],
+        "next_lesson":"14",
+    },
+    "14":{
+        "lesson_id":"14",
+        "subgroup":"priority",
+        "text":"Often in fencing, both fencers land a touch at nearly the same time. The fencer that gets the point is not the first fencer to hit but rather the fencer with priority",
+        "media":"https://imgur.com/2CdF4n4",
+        "keywords":["nearly the same time", "priority"],
+        "next_lesson":"15",
+    },
+    "15":{
+        "lesson_id":"15",
+        "subgroup":"priority",
+        "text":"The fencer with priority gets the point, even if both fencers land a touch. Press next to learn which fencer gets priority",
+        "media":"https://imgur.com/ZrMrv6Y",
+        "keywords":["priority", "which fencer gets priority"],
+        "next_lesson":"16",
+    },
+    "16":{
+        "lesson_id":"16",
+        "subgroup":"priority",
+        "text":"An attack has priority over a counter-attack",
+        "media":"https://imgur.com/fbYcaAA",
+        "keywords":["attack", "counter-attack"],
+        "next_lesson":"17",
+    },
+    "17":{
+        "lesson_id":"17",
+        "subgroup":"priority",
+        "text":"A riposte has priority over a second attempt to hit after a previous attempt missed or was parried",
+        "media":"https://imgur.com/7EMExTa",
+        "keywords":["riposte", "second attempt"],
+        "next_lesson":"18",
+    },
+    "18":{
+        "lesson_id":"18",
+        "subgroup":"priority",
+        "text":"A point-in-line has priority over an offensive action if it was in place before that action started",
+        "media":"https://imgur.com/x62vpHX",
+        "keywords":["point-in-line", "offensive action"],
+        "next_lesson":"19",
+    },
+    "19":{
+        "lesson_id":"19",
+        "subgroup":"priority",
+        "text":"An attack made with a beat has priority over an attack made without a beat",
+        "media":"https://imgur.com/2pDjnd9",
+        "keywords":["with a beat", "attack made without a beat"],
+        "next_lesson":"19",
+    },
+    "20":{
+        "lesson_id":"20",
+        "subgroup":"priority",
+        "text":"If both fencers make an attack at the same time then neither action has priority.",
+        "media":"https://imgur.com/U5mzfqj",
+        "keywords":["attack at the same time"],
+        "next_lesson":"end",
+    },    
 }
 
-quiz = {
+quizes = {
     "1":{
         "question_number":"1",
         "question_type":"media",
@@ -171,19 +329,23 @@ quiz = {
         "options":["Fencer 1", "Neither", "Fencer 2"],
         "answer":"Fencer 2",
         "answer_idx": "2",
-        "next_question":"End",
+        "next_question":"end",
     },            
 }
 
-@app.route('/lesson/<id>')
+@app.route('/')
+def welcome():
+    return render_template('home.html')
+
+@app.route('/learning/<id>')
 def lesson(id):
     lesson = lessons[id]
-    return render_template('lesson.html', lesson = lesson)
+    return render_template('learning.html', lesson = lesson)
 
 @app.route('/quiz/<id>')
 def quiz(id):
-    question = quiz[id]
-    return render_template('quiz.html', question = question) 
+    question = quizes[id]
+    return render_template('quiz.html', question = question)
 
 if __name__ == '__main__':
    app.run(debug = True)
