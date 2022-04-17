@@ -10,6 +10,8 @@ from matplotlib.pyplot import title
 from pandas import to_datetime
 app = Flask(__name__)
 
+userScores = {"testUser": 0}
+
 lessons = {
     "1":{
         "lesson_id":"1",
@@ -294,7 +296,7 @@ quizzes = {
         "next_question":"10",
     },
     "10":{
-        "question_number":"6",
+        "question_number":"10",
         "question_type":"media",
         "subgroup":"priority",
         "question":"Who gets the point?",
@@ -365,7 +367,28 @@ def learn(id):
 @app.route('/test/<id>')
 def test(id):
     question = quizzes[id]
-    return render_template('test.html', question = question)
+    return render_template('test.html', question = question, score = userScores["testUser"])
+
+@app.route('/updatescore', methods = ["GET","POST"])
+def updatescore():
+    global userScores
+
+    if request.method == "POST":
+        
+        json_data = request.get_json()
+        user = json_data["user"]
+        updatedScore = json_data["score"]
+
+        userScores[user] = updatedScore
+
+    return jsonify(score = updatedScore)
+        
+
+        
+
+@app.route('/results')
+def results():
+    return render_template('results.html', score = userScores["testUser"])
 
 if __name__ == '__main__':
    app.run(debug = True)

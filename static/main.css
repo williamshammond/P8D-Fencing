@@ -1,4 +1,9 @@
 /* Div Sizing*/
+.img{
+    max-height: 300px;
+    width: auto;
+}
+
 .homepageImgHolder{
     height: 250px;
 }
