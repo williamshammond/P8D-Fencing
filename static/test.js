@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     let button1 = $(`<button type="button" class="btn btn-primary btn-lg">${answers["0"]}</button>`);
     let button2 = $(`<button type="button" class="btn btn-primary btn-lg">${answers["1"]}</button>`);
-    let button3 = $(`<button type="button" class="btn btn-primary btn-lg">${answers["2"]}</button>`);
+    let button3 = $(`<button type="button" class="btn btn-primary btn-lg paddingTop">${answers["2"]}</button>`);
 
     button1.click(function(){
        checkAnswer(button1.text(), correctAnswer); 
@@ -32,7 +32,7 @@ $(document).ready(function(){
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify({"score":score,"user":"testUser"}),
             success: function(result){
-                console.log("success");
+                console.log(result);
             },
             error: function(request, status, error){
                 console.log("Error");

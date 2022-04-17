@@ -1,29 +1,61 @@
-/* Div Sizing*/
-.img{
+/*---------- Html Elements ----------*/
+img{
     max-height: 300px;
     width: auto;
 }
 
-.homepageImgHolder{
+
+/* ---------- Basic Classes ---------*/
+.center{
+    text-align: center;
+}
+
+.gapTop{
+    margin-top: 25px;
+}
+
+/* ---------- Div ID Styling ----------*/
+#homeRow{
+    height: 100px;
+    font-size: 40px;
+    text-align: center;
+}
+
+#scoreResult{
+    font-size: 45px;
+    text-align: center;
+}
+
+#scoreMessage{
+    font-size: 40px;
+    text-align: center;
+    height: 100px;
+    padding-top: 20px;
+}
+
+#homeInstructions{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*---------- Div Class Styling ----------*/
+.homePageImgHolder{
     height: 250px;
 }
 
-#homerow{
+.titleRow{
     height: 100px;
     font-size: 40px;
     text-align: center;
 }
 
-.titlerow{
-    height: 100px;
-    font-size: 40px;
-    text-align: center;
-}
-
-
-
-.homepage{
+.homePage{
     width: 100%;
 }
 
+.breakdownScore{
+    text-align: center;
+    font-size: 30px;
+}
 

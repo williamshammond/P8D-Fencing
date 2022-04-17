@@ -9,7 +9,7 @@ $(document).ready(function(){
     let nextText = (lessonNumber != 8 && lessonNumber != 13 && lessonNumber != 20)? "Next": "Return Home";
     let nextLink = (lessonNumber != 8 && lessonNumber != 13 && lessonNumber != 20)? `/learn/${+lessonNumber + 1}`: `/`;
 
-    $("#prevButton").append(`<a href="${prevLink}" class="btn btn-primary btn-lg" role="button" aria-disabled="true">${prevText}</a>`);
-    $("#nextButton").append(`<a href="${nextLink}" class="btn btn-primary btn-lg" role="button" aria-disabled="true">${nextText}</a>`);
+    $("#prevButton").append(`<a href="${prevLink}" class="btn btn-primary btn-lg gapTop" role="button" aria-disabled="true">${prevText}</a>`);
+    $("#nextButton").append(`<a href="${nextLink}" class="btn btn-primary btn-lg gapTop" role="button" aria-disabled="true">${nextText}</a>`);
 })
 

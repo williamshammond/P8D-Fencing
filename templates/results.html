@@ -1,6 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class = "row">
+    <div class = "col-md-12" id = "scoreMessage">
+        Congratulations, you now know how to score in sabre fencing!
+    </div>
+</div>
+<div class = "row">
+    <div class = "col-md-12" id = "scoreResult">
+        Score: {{ score }}/14
+    </div>
+</div>
 
+<div class = "row">
+    <div class = "col-md-12" id = "scoreResult">
+        <a href="{{ url_for('breakdown')}}" class="btn btn-primary btn-lg" role="button" aria-disabled="true">View Score Breakdown</a>
+    </div>
+</div>
 
 {% endblock %}

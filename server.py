@@ -385,10 +385,14 @@ def updatescore():
         
 
         
-
 @app.route('/results')
 def results():
     return render_template('results.html', score = userScores["testUser"])
+
+
+@app.route('/breakdown')
+def breakdown():
+    return render_template('breakdown.html', score = userScores["testUser"])
 
 if __name__ == '__main__':
    app.run(debug = True)
