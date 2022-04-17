@@ -5,13 +5,21 @@ img{
 }
 
 
-/* ---------- Basic Classes ---------*/
+/* ---------- Basic Classes / Small Styling ---------*/
 .center{
     text-align: center;
 }
 
 .gapTop{
     margin-top: 25px;
+}
+
+.red{
+    color: red;
+}
+
+.green{
+    color: green;
 }
 
 /* ---------- Div ID Styling ----------*/
@@ -37,6 +45,13 @@ img{
     font-size: 20px;
     text-align: center;
     margin-top: 20px;
+}
+
+#answerCheck{
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 /*---------- Div Class Styling ----------*/

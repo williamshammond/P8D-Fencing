@@ -48,11 +48,13 @@ $(document).ready(function(){
 
         if(!questionAnswered && chosenAnswer == correctAnswer){
             $("#answerCheck").append("<p>Correct<p>");
+            $("#answerCheck").addClass("green")
             addNextButton();
             updateScore(score + 1);
         }
         else if (!questionAnswered){
             $("#answerCheck").append("<p>Incorrect<p>");
+            $("#answerCheck").addClass("red")
             addNextButton();
         }
         
