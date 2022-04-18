@@ -351,8 +351,21 @@ quizzes = {
         "options":["Fencer 1", "Neither", "Fencer 2"],
         "answer":"Fencer 2",
         "answer_idx": "2",
-        "next_question":"end",
-    },            
+        "next_question":"15",
+    },
+    "15":{
+        "question_number":"15",
+        "question_type":"text",
+        "subgroup":"priority",
+        "question":"",
+        "media":"None",
+        "text":"In general, the fencer that receives a point is the ",
+        "options":["First to touch", "Player with priority", "Last to touch"],
+        "answer":"Player with priority",
+        "answer_idx": "1",
+        "next_question":"end"
+    
+    },
 }
 
 @app.route('/')
