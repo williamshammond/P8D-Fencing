@@ -363,7 +363,7 @@ quizzes = {
         "options":["First to touch", "Player with priority", "Last to touch"],
         "answer":"Player with priority",
         "answer_idx": "1",
-        "next_question":"16"
+        "next_question":"16",
     
     },
     "16":{
