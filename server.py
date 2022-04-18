@@ -377,7 +377,7 @@ quizzes = {
     "answer":"a counter-attack",
     "answer_idx": "0",
     "next_question":"end"
-    }
+    },
     
 }
 
