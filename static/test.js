@@ -61,8 +61,8 @@ $(document).ready(function(){
     }
 
     function addNextButton(){
-        let nextText = (questionNumber != 15)? "Next Question": "Finish";
-        let nextLink = (questionNumber != 15)? `/test/${+questionNumber + 1}`: `/results`;
+        let nextText = (questionNumber != 16)? "Next Question": "Finish";
+        let nextLink = (questionNumber != 16)? `/test/${+questionNumber + 1}`: `/results`;
 
         $("#nextButton").append(`<a href="${nextLink}" class="btn btn-primary btn-lg" role="button" aria-disabled="true">${nextText}</a>`);
 

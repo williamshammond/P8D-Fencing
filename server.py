@@ -363,9 +363,22 @@ quizzes = {
         "options":["First to touch", "Player with priority", "Last to touch"],
         "answer":"Player with priority",
         "answer_idx": "1",
-        "next_question":"end"
+        "next_question":"16"
     
     },
+    "16":{
+    "question_number":"16",
+    "question_type":"text",
+    "subgroup":"priority",
+    "question":"",
+    "media":"None",
+    "text":"An attack has priority over",
+    "options":["a counter-attack", "a point-in-line", "a beat"],
+    "answer":"a counter-attack",
+    "answer_idx": "0",
+    "next_question":"end"
+    },
+    
 }
 
 @app.route('/')
