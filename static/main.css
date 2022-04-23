@@ -1,9 +1,19 @@
+/*---------- SITE THEME (Can be changed) ----------*/
+/*
+Primary blue (banner, selections, text highlight): #4285f4
+Secondary blue closer to teal (buttons, ): #0097a7ff
+Light grey (hover on elements): #f7f7f7
+Dark grey (home text, ); #262626
+
 /*---------- Html Elements ----------*/
 img{
     max-height: 300px;
     width: auto;
 }
 
+a.noUnderline{
+    text-decoration: none;
+}
 
 /* ---------- Basic Classes / Small Styling ---------*/
 .center{
@@ -23,10 +33,20 @@ img{
 }
 
 /* ---------- Div ID Styling ----------*/
-#homeRow{
-    height: 100px;
-    font-size: 40px;
+
+#fencingText{
+    font-size: 70px;
+    color: #4285f4;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+
+#homeText{
+    font-size: 30px;
+    color: #363636;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 #scoreResult{
@@ -55,8 +75,38 @@ img{
 }
 
 /*---------- Div Class Styling ----------*/
+.navbar-custom{
+    background-color: #4285f4;
+}
+
+.navbar-custom .navbar-brand{
+    color: white;
+}
+.navbar-custom .nav-link {
+    color: white;
+}
+
+
+.homePageBox{
+    background-color: white;
+    padding: 10px;
+}
+
+.homePageBox:hover{
+    background-color: #f7f7f7;
+    padding: 10px;
+}
+
+.homePageLink{
+    margin-top: 5px;
+    font-size: 30px;
+    color:#262626;
+}
+
+
+
 .homePageImgHolder{
-    height: 250px;
+    height: 200px;
 }
 
 .titleRow{
