@@ -59,7 +59,15 @@ Fencing101 | Home
 
     <div class = "row">
         <div class = "col-md-12" id = "homeInstructions">
-            Select  a category to begin learning. When you have completed every category, click test to quiz your skills!
+            Select  a category to begin learning. When you have completed every category, click 
+            <small>
+                <span class="btn-group">
+                    <a href = "{{url_for('test', id = 1)}}">
+                        <button class="btn btn-mini primaryBlue whiteText">Test</button>
+                    </a>
+                </span> 
+        </small> 
+        to quiz your skills!
         </div>
     </div>
 

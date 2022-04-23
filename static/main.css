@@ -1,7 +1,7 @@
 /*---------- SITE THEME (Can be changed) ----------*/
 /*
 Primary blue (banner, selections, text highlight): #4285f4
-Secondary blue closer to teal (buttons, ): #0097a7ff
+Secondary blue closer to teal (buttons, ): #007ce8
 Light grey (hover on elements): #f7f7f7
 Dark grey (home text, ); #262626
 
@@ -14,6 +14,9 @@ img{
 a.noUnderline{
     text-decoration: none;
 }
+
+.btn-group { display: inline-block; }
+
 
 /* ---------- Basic Classes / Small Styling ---------*/
 .center{
@@ -30,6 +33,18 @@ a.noUnderline{
 
 .green{
     color: green;
+}
+
+.primaryBlue{
+    background-color: #4285f4;
+}
+
+.secondaryBlue{
+    background-color: #007ce8;
+}
+
+.whiteText{
+    color: white;
 }
 
 /* ---------- Div ID Styling ----------*/
@@ -64,7 +79,7 @@ a.noUnderline{
 #homeInstructions{
     font-size: 20px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 #answerCheck{
@@ -123,4 +138,8 @@ a.noUnderline{
     text-align: center;
     font-size: 30px;
 }
+
+
+/* ---------- Span Styling ----------*/
+
 
