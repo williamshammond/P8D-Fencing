@@ -18,34 +18,34 @@ Fencing101 | Test
     </div>
 </div>
 
+<!-- Question content (actual question) -->
+<div class = "row lpad">
+    <div class = "col-md-12">
+        <pre class="regFontSize center">{{ question.question }}</pre>
+    </div>
+</div>
+
+
 <!-- Question media or text (One or the other)-->
-<div class = "row">
+<div class = "row lpad">
     <div class = "col-md-12">
         {% if question.question_type == "media" %}
-            <img src = "{{ question.media }}">
+            <img src = "{{ question.media }}" class="stdMediaSize">
         {% else %}
-            <pre>{{ question.text }}</pre>
+            <pre class="regFontSize">{{ question.text }}</pre>
         {% endif %}
     </div>
 </div>
 
-<!-- Question content (actual question) -->
-<div class = "row">
-    <div class = "col-md-12">
-        <pre>{{ question.question }}</pre>
-    </div>
-</div>
-
-
 <!-- Place holder divs for dynamically created buttons -->
 <div class = "row">
-    <div class = "col-md-4" id = "option1">
+    <div class = "col-md-4 center" id = "option1">
         
     </div>
-    <div class = "col-md-4" id = "option2">
+    <div class = "col-md-4 center" id = "option2">
         
     </div>
-    <div class = "col-md-4" id = "option3">
+    <div class = "col-md-4 center" id = "option3">
         
     </div>
 </div>

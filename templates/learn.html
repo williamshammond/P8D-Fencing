@@ -20,7 +20,7 @@ Fencing101 | Learn
     <!-- Main Lesson Text Content-->
     <div class = "row">
         <div class = "col-md-12">
-            <pre>{{ lesson.text }}</pre>
+            <pre class="regFontSize">{{ lesson.text }}</pre>
         </div>
     </div>
 
@@ -28,7 +28,7 @@ Fencing101 | Learn
     <div class = "row">
         <div class = "col-md-12">
             {% for media in lesson.media %}
-                <img src = "{{ media }}">
+                <img src = "{{ media }}" class="stdMediaSize">
             {% endfor %}
         </div>
     </div>

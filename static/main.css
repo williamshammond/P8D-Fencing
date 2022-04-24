@@ -22,7 +22,25 @@ img{
     color: green;
 }
 
+.regFontSize{
+    font-size: 20px;
+}
+
+.lpad{
+    padding-bottom: 10px;
+}
+.center{
+    margin: auto;
+    display: block;
+}
+.stdMediaSize{
+    width: 50%;
+    margin: auto;
+    display: block;
+}
+
 /* ---------- Div ID Styling ----------*/
+
 #homeRow{
     height: 100px;
     font-size: 40px;
