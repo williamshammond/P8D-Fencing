@@ -8,6 +8,8 @@ Fencing101 | Learn
 <script> var lesson = {{ lesson | tojson }} </script>
 
 <script src = "{{url_for('static', filename = 'learn.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.js" integrity="sha512-19TrqSGVSwaC2IDGHrD+tAkX59/w5cXy0BHDVwn7OJQXxavORhFSFM7DOO9soXKuo8O7gGNHiG9R2vFrXRBcTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Lesson Header-->
     <div class = "row titleRow">
@@ -20,7 +22,7 @@ Fencing101 | Learn
     <!-- Main Lesson Text Content-->
     <div class = "row">
         <div class = "col-md-12">
-            <pre class="regFontSize">{{ lesson.text }}</pre>
+            <pre class="regFontSize" id="lesson_text">{{ lesson.text }}</pre>
         </div>
     </div>
 

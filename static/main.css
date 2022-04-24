@@ -63,6 +63,11 @@ a.noUnderline{
     color: white;
 
 }
+mark{
+    color: #4285f4;
+    background-color: white;
+    font-style: bold;
+}
 
 /* ---------- Div ID Styling ----------*/
 

@@ -1,6 +1,7 @@
 $(document).ready(function(){
     
     let lessonNumber = lesson["lesson_id"];
+    let keywords = lesson["keywords"];
     console.log(lessonNumber);
 
     let prevText = (lessonNumber != 1 && lessonNumber != 9 && lessonNumber != 14) ? "Previous": "Return Home";
@@ -11,5 +12,12 @@ $(document).ready(function(){
 
     $("#prevButton").append(`<a href="${prevLink}" class="btn btn-primary btn-lg gapTop" role="button" aria-disabled="true">${prevText}</a>`);
     $("#nextButton").append(`<a href="${nextLink}" class="btn btn-primary btn-lg gapTop" role="button" aria-disabled="true">${nextText}</a>`);
+    highlight_keywords(keywords);
 })
 
+
+function highlight_keywords(keywords) {
+    $.each(keywords, function (indexInArray, word) { 
+        $("#lesson_text").mark(word);  
+    });
+}
