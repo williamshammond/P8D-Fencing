@@ -1,15 +1,28 @@
+/*---------- SITE THEME (Can be changed) ----------*/
+/*
+Primary blue (banner, selections, text highlight): #4285f4
+Secondary blue closer to teal (buttons, ): #007ce8
+Light grey (hover on elements): #f7f7f7
+Dark grey (home text, ); #262626
+
 /*---------- Html Elements ----------*/
 img{
     max-height: 300px;
     width: auto;
 }
 
+a.noUnderline{
+    text-decoration: none;
+}
+
+.btn-group { display: inline-block; }
+
 
 /* ---------- Basic Classes / Small Styling ---------*/
+
 .center{
     text-align: center;
 }
-
 .gapTop{
     margin-top: 25px;
 }
@@ -29,14 +42,26 @@ img{
 .lpad{
     padding-bottom: 10px;
 }
-.center{
-    margin: auto;
-    display: block;
+.tpad{
+    padding-top: 10px;
 }
+
 .stdMediaSize{
     width: 50%;
     margin: auto;
     display: block;
+}
+.primaryBlue{
+    background-color: #4285f4;
+}
+
+.secondaryBlue{
+    background-color: #007ce8;
+}
+
+.whiteText{
+    color: white;
+
 }
 
 /* ---------- Div ID Styling ----------*/
@@ -44,7 +69,20 @@ img{
 #homeRow{
     height: 100px;
     font-size: 40px;
+}
+#fencingText{
+    font-size: 70px;
+    color: #4285f4;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+
+#homeText{
+    font-size: 30px;
+    color: #363636;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 #scoreResult{
@@ -62,7 +100,7 @@ img{
 #homeInstructions{
     font-size: 20px;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 #answerCheck{
@@ -73,8 +111,38 @@ img{
 }
 
 /*---------- Div Class Styling ----------*/
+.navbar-custom{
+    background-color: #4285f4;
+}
+
+.navbar-custom .navbar-brand{
+    color: white;
+}
+.navbar-custom .nav-link {
+    color: white;
+}
+
+
+.homePageBox{
+    background-color: white;
+    padding: 10px;
+}
+
+.homePageBox:hover{
+    background-color: #f7f7f7;
+    padding: 10px;
+}
+
+.homePageLink{
+    margin-top: 5px;
+    font-size: 30px;
+    color:#262626;
+}
+
+
+
 .homePageImgHolder{
-    height: 250px;
+    height: 200px;
 }
 
 .titleRow{
@@ -91,4 +159,8 @@ img{
     text-align: center;
     font-size: 30px;
 }
+
+
+/* ---------- Span Styling ----------*/
+
 

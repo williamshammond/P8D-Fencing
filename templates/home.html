@@ -7,48 +7,56 @@ Fencing101 | Home
 
 {% block content %}
 <title>Base Page</title>
-    <div class = "row" id="homeRow">
-        <div class = "col-md-12">How to Score in Sabre Fencing</div>
-    </div>
-
     <div class = "row">
-        <div class = "col-md-4 stdMediaSize">
-            <a href = "{{url_for('learn', id = 1)}}">
-                <div class = "homePageImgHolder"> 
-                    <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/cartoonFencers.png')}}">
-                </div>
-                <div class = "regFontSize center">
-                    Basics
-                </div>
-            </a>
-        </div>
-        <div class = "col-md-4 stdMediaSize">
-            <a href = "{{url_for('learn', id = 9)}}">
-                <div class = "homePageImgHolder"> 
-                    <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/cartoonBlocking.png')}}">
-                </div>
-                <div class = "regFontSize center">
-                    Moves
-                </div>
-            </a>
-        </div>
-        <div class = "col-md-4 stdMediaSize">
-            <a href = "{{url_for('learn', id = 14)}}">
-                <div class = "homePageImgHolder"> 
-                    <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/tiedFencers.jpeg')}}">
-                </div>
-                <div class = "regFontSize center">
-                    Priority
-                </div>
-            </a>
+        <div class = "col-md-12">
+            <div id="fencingText">
+                Fencing 101
+            </div>
+            <div id="homeText">
+                How to Score in Sabre Fencing
+            </div>
         </div>
     </div>
 
-    <div class = "row">
-        <div class = "col-md-12" id = "homeInstructions">
-            Select  a category to begin learning. When you have completed every category, click test to quiz your skills!
-        </div>
+<div class = "row">
+    <div class = "col-md-4 stdMediaSize">
+        <a href = "{{url_for('learn', id = 1)}}">
+            <div class = "homePageImgHolder lpad">
+                <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/cartoonFencers.png')}}">
+            </div>
+            <div class = "regFontSize center">
+                Basics
+            </div>
+        </a>
     </div>
+    <div class = "col-md-4 stdMediaSize">
+        <a href = "{{url_for('learn', id = 9)}}">
+            <div class = "homePageImgHolder">
+                <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/cartoonBlocking.png')}}">
+            </div>
+            <div class = "regFontSize center">
+                Moves
+            </div>
+        </a>
+    </div>
+    <div class = "col-md-4 stdMediaSize">
+        <a href = "{{url_for('learn', id = 14)}}">
+            <div class = "homePageImgHolder">
+                <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/tiedFencers.jpeg')}}">
+            </div>
+            <div class = "regFontSize center">
+                Priority
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class = "row">
+    <div class = "col-md-12" id = "homeInstructions">
+        Select  a category to begin learning. When you have completed every category, click test to quiz your skills!
+    </div>
+</div>
+
 
 
 {% endblock %}
