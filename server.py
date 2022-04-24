@@ -195,6 +195,10 @@ lessons = {
     },    
 }
 
+lessons_visited = []
+
+lessons_complete = "false"
+
 quizzes = {
     "1":{
         "question_number":"1",
@@ -387,8 +391,11 @@ def home():
 
 @app.route('/learn/<id>')
 def learn(id):
+    global lessons_complete
     lesson = lessons[id]
-    return render_template('learn.html', lesson = lesson)
+    lessons_visited[int(id) - 1] = 1
+    are_lessons_complete()
+    return render_template('learn.html', lesson = lesson, lessons_complete = lessons_complete)
 
 @app.route('/test/<id>')
 def test(id):
@@ -420,5 +427,22 @@ def results():
 def breakdown():
     return render_template('breakdown.html', score = userScores["testUser"])
 
+def reset_visited():
+    global lessons_visited
+    lessons_visited = []
+    for i in lessons.items():
+        lessons_visited.append(0)
+
+def are_lessons_complete():
+    global lessons_complete
+    if(set(lessons_visited) == {1}):
+        lessons_complete = "true"
+    else:
+        lessons_complete = "false"
+
 if __name__ == '__main__':
+   reset_visited()
    app.run(debug = True)
+
+
+

@@ -127,6 +127,13 @@ mark{
     color: white;
 }
 
+.disabled {
+    color: red;
+    cursor: not-allowed;  
+}
+.disabled a {
+    pointer-events: none; 
+}
 
 .homePageBox{
     background-color: white;
