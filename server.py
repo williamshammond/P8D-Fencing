@@ -387,7 +387,7 @@ quizzes = {
 
 @app.route('/')
 def home():
-    return render_template('home.html')
+    return render_template('home.html', lessons_complete = lessons_complete)
 
 @app.route('/learn/<id>')
 def learn(id):

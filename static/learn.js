@@ -13,7 +13,7 @@ $(document).ready(function(){
     $("#prevButton").append(`<a href="${prevLink}" class="btn btn-primary btn-lg gapTop" role="button" aria-disabled="true">${prevText}</a>`);
     $("#nextButton").append(`<a href="${nextLink}" class="btn btn-primary btn-lg gapTop" role="button" aria-disabled="true">${nextText}</a>`);
     highlight_keywords(keywords);
-    enable_test();
+    add_click_events();
 })
 
 
@@ -23,12 +23,29 @@ function highlight_keywords(keywords) {
     });
 }
 
-function enable_test() {
+function check_test_enabled() {
+    console.log(lessons_complete)
     if(lessons_complete == true){
-        console.log(lessons_complete)
-        $("#test-button").removeClass("disabled");
-        $("#test-button").removeAttr("title");
-
+        let goTo = "/test/" + "1"
+        window.location = (goTo)       
     }
-        
+    else{
+        $("#main-content").css("filter", "blur(5px)");
+        $("#options").css("visibility", "visible");         
+    }    
 }
+
+function add_click_events() {
+    $("#proceed").click(function (e) { 
+        let goTo = "/test/" + "1"
+        window.location = (goTo)    
+    });
+    $("#test-button").click(function (e) { 
+        check_test_enabled(); 
+    });
+    $("#stay").click(function (e) { 
+        $("#main-content").css("filter", "blur(0px)");
+        $("#options").css("visibility", "hidden");    
+    });    
+}
+

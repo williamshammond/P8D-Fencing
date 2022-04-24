@@ -172,6 +172,23 @@ mark{
     font-size: 30px;
 }
 
+#options{
+    background-color: #d3d3d3;
+    visibility: hidden;
+    width: 500px;
+    padding: 100px;
+    position: fixed;
+    margin: 100px auto;
+    margin-top: 15%;
+    border: 2px solid black;
+    text-align: center;
+    left: 50%;
+    top: 100px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 1000;    
+}
 
 /* ---------- Span Styling ----------*/
 

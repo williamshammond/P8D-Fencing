@@ -7,6 +7,13 @@ Fencing101 | Home
 
 {% block content %}
 <title>Base Page</title>
+<script> 
+    var lessons_complete = {{ lessons_complete }} 
+</script>
+    
+<script src = "{{url_for('static', filename = 'home.js')}}"></script>
+
+<div id="main-content">
     <div class = "row">
         <div class = "col-md-12">
             <div id="fencingText">
@@ -62,8 +69,8 @@ Fencing101 | Home
         <div class = "col-md-12" id = "homeInstructions">
             Select  a category to begin learning. When you have completed every category, click 
             <small>
-                <span class="btn-group">
-                    <a href = "{{url_for('test', id = 1)}}">
+                <span class="btn-group test-button">
+                    <a href = "#">
                         <button class="btn btn-mini primaryBlue whiteText">Test</button>
                     </a>
                 </span> 
@@ -71,6 +78,13 @@ Fencing101 | Home
         to quiz your skills!
         </div>
     </div>
+</div>
 
-
+<div id="options">
+    <p>
+        <b>We recommed that you review all lessons before starting the test. Do you still want to proceed with the test?</b>
+    </p>
+    <button id="proceed" type="button"  class="btn btn-primary btn-lg gapTop">Yes</button>
+    <button id="stay" type="button" class="btn btn-primary btn-lg gapTop">No</button>
+</div>
 {% endblock %}

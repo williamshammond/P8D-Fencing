@@ -14,6 +14,7 @@ var lessons_complete = {{ lessons_complete }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.js" integrity="sha512-19TrqSGVSwaC2IDGHrD+tAkX59/w5cXy0BHDVwn7OJQXxavORhFSFM7DOO9soXKuo8O7gGNHiG9R2vFrXRBcTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+<div id="main-content">
     <!-- Lesson Header-->
     <div class = "row titleRow">
         <div class = "col-md-12">
@@ -48,5 +49,14 @@ var lessons_complete = {{ lessons_complete }}
         </div>
     </div>
 
+</div>
+
+<div id="options">
+    <p>
+        <b>We recommed that you review all lessons before starting the test. Do you still want to proceed with the test?</b>
+    </p>
+    <button id="proceed" type="button"  class="btn btn-primary btn-lg gapTop">Yes</button>
+    <button id="stay" type="button" class="btn btn-primary btn-lg gapTop">No</button>
+</div>
 {% endblock %}
 
