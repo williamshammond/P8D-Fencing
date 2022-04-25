@@ -135,7 +135,7 @@ lessons = {
         "subgroup":"priority",
         "header":"Priority",
         "text":"Often in fencing, both fencers land a touch at nearly the same time.\n The fencer that gets the point is not the first fencer to hit but rather the fencer with priority",
-        "media":["https://imgur.com/2CdF4n4.gif"],
+        "media":["https://imgur.com/ZrMrv6Y.gif"],
         "keywords":["nearly the same time", "priority"],
         "next_lesson":"15",
     },
@@ -396,6 +396,14 @@ def learn(id):
     lessons_visited[int(id) - 1] = 1
     are_lessons_complete()
     return render_template('learn.html', lesson = lesson, lessons_complete = lessons_complete)
+
+@app.route('/learning/<category>')
+def learningCategory(category):
+    if category == "moves":
+        media = "https://imgur.com/IdvtQay.png"
+    elif category == "priority":
+        media = "https://imgur.com/ZrMrv6Y.gif"
+    return render_template('learningCategory.html', category = category, media = media)
 
 @app.route('/test/<id>')
 def test(id):

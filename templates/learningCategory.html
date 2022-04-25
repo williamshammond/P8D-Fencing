@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}
+Fencing101 | Learn
+{% endblock %}
+
+{% block content %}
+<div id="main-content">
+    <!-- Lesson Header-->
+    <div class = "row titleRow">
+        <div class = "col-md-12">
+            {{ category }}
+        </div>
+        
+    </div>
+
+
+    <!-- Div to display media content -->
+    <div class = "row">
+        <div class = "col-md-12">
+            <img src = "{{ media }}" class="stdMediaSize">
+        </div>
+    </div>
+
+    <!-- Empty spaces for dynamically created button navigation -->
+    
+    <div class = "row">
+        <div class = "col-md-2" id = "prevButton">
+                <a href="{{ url_for('home') }}" class="btn btn-primary btn-lg gapTop" role="button" aria-disabled="true">Return Home</a>
+        </div>
+        <div class = "col-md-8"></div>
+        <div class = "col-md-2" id = "nextButton">
+
+            {% if category == "moves" %}
+                <a href="{{ url_for('learn', id = 9) }}" class="btn btn-primary btn-lg gapTop" role="button" aria-disabled="true">Continue to Moves Section</a>
+            {% else %}
+                <a href="{{ url_for('learn', id = 14) }}" class="btn btn-primary btn-lg gapTop" role="button" aria-disabled="true">Continue to Priority Section</a>
+            {% endif %}
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}
