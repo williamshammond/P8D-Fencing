@@ -8,6 +8,11 @@ $(document).ready(function(){
     let button2 = $(`<button type="button" class="btn btn-primary btn-lg">${answers["1"]}</button>`);
     let button3 = $(`<button type="button" class="btn btn-primary btn-lg paddingTop">${answers["2"]}</button>`);
 
+    $(".test-button").click(function (e) { 
+        let goTo = "/test/" + "1"
+        window.location = (goTo)    
+    });    
+
     button1.click(function(){
        checkAnswer(button1.text(), correctAnswer); 
     })
