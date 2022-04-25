@@ -2,48 +2,46 @@
 
 {% block content %}
     <div class = "row" id="homerow">
-        <div class = "col-md-12">Score Breakdown</div>
+        <div class = "col-md-12 breakdownHeader">Score Breakdown</div>
     </div>
 
-    <div class = "row">
-        <div class = "col-md-4">
-            <a href = "{{url_for('learn', id = 1)}}">
-                <div class = "homepageImgHolder"> 
-                    <img class = "homepage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/cartoonFencers.png')}}">
-                </div>
-                <div class = "center">
-                    Basics
-                </div>
+    <div class = "row breakdownRow">
+        
+        <div class = "col-md-4 stdMediaSize">
+            <a class = "noUnderline" href = "{{url_for('learn', id = 1)}}">
+                <div class = "homePageBox">
+                    <div class = "homePageImgHolder">
+                        <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/cartoonFencers.png')}}">
+                    </div>
+                    <div class = "center homePageLink">
+                        Basics: 4/4
+                    </div>
+                </div> 
             </a>
-            <div class = "breakdownScore">
-                2/2
-            </div>
         </div>
-        <div class = "col-md-4">
-            <a href = "{{url_for('learn', id = 9)}}">
-                <div class = "homepageImgHolder"> 
-                    <img class = "homepage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/cartoonBlocking.png')}}">
-                </div>
-                <div class = "center">
-                    Moves
+        <div class = "col-md-4 stdMediaSize">
+            <a class = "noUnderline" href = "{{url_for('learn', id = 9)}}">
+                <div class = "homePageBox">
+                    <div class = "homePageImgHolder">
+                        <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/cartoonBlocking.png')}}">
+                    </div>
+                    <div class = "center homePageLink">
+                        Moves: 2/3
+                    </div>
                 </div>
             </a>
-            <div class = "breakdownScore">
-                2/3
-            </div>
         </div>
-        <div class = "col-md-4">
-            <a href = "{{url_for('learn', id = 14)}}">
-                <div class = "homepageImgHolder"> 
-                    <img class = "homepage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/tiedFencers.jpeg')}}">
-                </div>
-                <div class = "center">
-                    Priority
+        <div class = "col-md-4 stdMediaSize">
+            <a class = "noUnderline" href = "{{url_for('learn', id = 14)}}">
+                <div class = "homePageBox">
+                    <div class = "homePageImgHolder">
+                        <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/tiedFencers.jpeg')}}">
+                    </div>
+                    <div class = "center homePageLink">
+                        Priority: 7/9
+                    </div>
                 </div>
             </a>
-            <div class = "breakdownScore">
-                5/11
-            </div>
         </div>
     </div>
 
@@ -52,6 +50,7 @@
             <a href="{{ url_for('home')}}" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Return Home</a>
         </div>
     </div>
+
 
 
 {% endblock %}

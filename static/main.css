@@ -167,9 +167,15 @@ mark{
     width: 100%;
 }
 
-.breakdownScore{
+.breakdownHeader{
     text-align: center;
     font-size: 30px;
+    margin-top: 20px;
+}
+
+.breakdownRow{
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 #options{
