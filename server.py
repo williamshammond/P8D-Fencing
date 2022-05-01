@@ -418,9 +418,9 @@ def learn(id):
 @app.route('/learning/<category>')
 def learningCategory(category):
     if category == "moves":
-        media = "https://imgur.com/IdvtQay.png"
+        media = "https://i.imgur.com/LMlRmj9.jpg"
     elif category == "priority":
-        media = "https://imgur.com/ZrMrv6Y.gif"
+        media = "https://i.imgur.com/HyV6bF9.jpg"
     return render_template('learningCategory.html', category = category, media = media)
 
 @app.route('/test/<id>')
