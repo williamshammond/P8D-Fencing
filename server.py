@@ -133,7 +133,7 @@ lessons = {
     "14":{
         "lesson_id":"14",
         "subgroup":"moves",
-        "header":"Moves — Point-in-line",
+        "header":"Moves — Point-in-Line",
         "text":"A fencer can establish point-in-line by extending their blade straight forward from their shoulder while their opponent is not within attacking range",
         "media":["https://i.imgur.com/t8xpbF8.png","https://imgur.com/lNNs3Iz.gif"],
         "keywords":["point-in-line"],
