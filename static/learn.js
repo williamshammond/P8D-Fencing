@@ -7,18 +7,18 @@ $(document).ready(function(){
     let nextText;
     let nextLink;
 
-    let prevText = (lessonNumber != 1 && lessonNumber != 9 && lessonNumber != 14) ? "Previous": "Return Home";
-    let prevLink = (lessonNumber != 1 && lessonNumber != 9 && lessonNumber != 14) ? `/learn/${+lessonNumber - 1}`: `/`;
+    let prevText = (lessonNumber != 1 && lessonNumber != 11 && lessonNumber != 16) ? "Previous": "Return Home";
+    let prevLink = (lessonNumber != 1 && lessonNumber != 11 && lessonNumber != 16) ? `/learn/${+lessonNumber - 1}`: `/`;
 
-    if(lessonNumber == 8){
+    if(lessonNumber == 10){
         nextText = "Finish";
         nextLink = "/learning/moves";
     }
-    else if(lessonNumber == 13){
+    else if(lessonNumber == 15){
         nextText = "Finish";
         nextLink = "/learning/priority";
     }
-    else if (lessonNumber == 20){
+    else if (lessonNumber == 22){
         nextText = "Finish";
         nextLink = "/";
     }
