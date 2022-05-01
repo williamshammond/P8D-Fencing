@@ -1,21 +1,23 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class = "row">
-    <div class = "col-md-12" id = "scoreMessage">
-        Congratulations, you now know how to score in sabre fencing!
+<body class="stdFont darkGray">
+        
+    <div class = "row">
+        <div class = "col-md-12" id = "scoreMessage">
+            Congratulations, you now know how to score in sabre fencing!
+        </div>
     </div>
-</div>
-<div class = "row">
-    <div class = "col-md-12" id = "scoreResult">
-        Score: {{ score }}/16
+    <div class = "row">
+        <div class = "col-md-12" id = "scoreResult">
+            Score: {{ score }}/16
+        </div>
     </div>
-</div>
 
-<div class = "row">
-    <div class = "col-md-12" id = "scoreResult">
-        <a href="{{ url_for('breakdown')}}" class="btn btn-primary btn-lg" role="button" aria-disabled="true">View Score Breakdown</a>
+    <div class = "row">
+        <div class = "col-md-12" id = "scoreResult">
+            <a href="{{ url_for('breakdown')}}" class="btn btn-primary btn-lg" role="button" aria-disabled="true">View Score Breakdown</a>
+        </div>
     </div>
-</div>
-
+</body>
 {% endblock %}

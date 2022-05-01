@@ -20,6 +20,10 @@ a.noUnderline{
 
 /* ---------- Basic Classes / Small Styling ---------*/
 
+.stdFont{
+    font-family: arial-black;
+}
+
 .darkGray{
     color: #696969;
 }
@@ -97,6 +101,7 @@ mark{
 #scoreResult{
     font-size: 45px;
     text-align: center;
+    padding-top: 35px;
 }
 
 #scoreMessage{

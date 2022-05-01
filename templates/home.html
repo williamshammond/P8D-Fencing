@@ -13,78 +13,81 @@ Fencing101 | Home
     
 <script src = "{{url_for('static', filename = 'home.js')}}"></script>
 
-<div id="main-content">
-    <div class = "row">
-        <div class = "col-md-12">
-            <div id="fencingText">
-                Fencing 101
-            </div>
-            <div id="homeText">
-                How to Score in Sabre Fencing
-            </div>
-        </div>
-    </div>
-
-    <div class = "row">
+<body class="stdFont darkGray">
         
-        <div class = "col-md-4 stdMediaSize">
-            <a class = "noUnderline" href = "{{url_for('learn', id = 1)}}">
-                <div class = "homePageBox">
-                    <div class = "homePageImgHolder">
-                        <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/cartoonFencers.png')}}">
-                    </div>
-                    <div class = "center homePageLink">
-                        Basics
-                    </div>
-                </div> 
-            </a>
-        </div>
-        <div class = "col-md-4 stdMediaSize">
-            <a class = "noUnderline" href = "{{url_for('learn', id = 11)}}">
-                <div class = "homePageBox">
-                    <div class = "homePageImgHolder">
-                        <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/cartoonBlocking.png')}}">
-                    </div>
-                    <div class = "center homePageLink">
-                        Moves
-                    </div>
+    <div id="main-content">
+        <div class = "row">
+            <div class = "col-md-12">
+                <div id="fencingText">
+                    Fencing 101
                 </div>
-            </a>
-        </div>
-        <div class = "col-md-4 stdMediaSize">
-            <a class = "noUnderline" href = "{{url_for('learn', id = 14)}}">
-                <div class = "homePageBox">
-                    <div class = "homePageImgHolder">
-                        <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/tiedFencers.jpeg')}}">
-                    </div>
-                    <div class = "center homePageLink">
-                        Priority
-                    </div>
+                <div id="homeText">
+                    How to Score in Sabre Fencing
                 </div>
-            </a>
+            </div>
+        </div>
+
+        <div class = "row">
+            
+            <div class = "col-md-4 stdMediaSize">
+                <a class = "noUnderline" href = "{{url_for('learn', id = 1)}}">
+                    <div class = "homePageBox">
+                        <div class = "homePageImgHolder">
+                            <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/cartoonFencers.png')}}">
+                        </div>
+                        <div class = "center homePageLink darkGray">
+                            Basics
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class = "col-md-4 stdMediaSize">
+                <a class = "noUnderline" href = "{{url_for('learn', id = 11)}}">
+                    <div class = "homePageBox">
+                        <div class = "homePageImgHolder">
+                            <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/cartoonBlocking.png')}}">
+                        </div>
+                        <div class = "center homePageLink darkGray">
+                            Moves
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class = "col-md-4 stdMediaSize">
+                <a class = "noUnderline" href = "{{url_for('learn', id = 14)}}">
+                    <div class = "homePageBox">
+                        <div class = "homePageImgHolder">
+                            <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/tiedFencers.jpeg')}}">
+                        </div>
+                        <div class = "center homePageLink">
+                            Priority
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class = "row">
+            <div class = "col-md-12" id = "homeInstructions">
+                Select  a category to begin learning. When you have completed every category, click
+                <small>
+                    <span class="btn-group test-button">
+                        <a href = "#">
+                            <button class="btn btn-mini primaryBlue whiteText">Test</button>
+                        </a>
+                    </span>
+            </small>
+            to quiz your skills!
+            </div>
         </div>
     </div>
 
-    <div class = "row">
-        <div class = "col-md-12" id = "homeInstructions">
-            Select  a category to begin learning. When you have completed every category, click 
-            <small>
-                <span class="btn-group test-button">
-                    <a href = "#">
-                        <button class="btn btn-mini primaryBlue whiteText">Test</button>
-                    </a>
-                </span> 
-        </small> 
-        to quiz your skills!
-        </div>
+    <div id="options">
+        <p>
+            <b>We recommed that you review all lessons before starting the test. Do you still want to proceed with the test?</b>
+        </p>
+        <button id="proceed" type="button"  class="btn btn-primary btn-lg gapTop">Yes</button>
+        <button id="stay" type="button" class="btn btn-primary btn-lg gapTop">No</button>
     </div>
-</div>
-
-<div id="options">
-    <p>
-        <b>We recommed that you review all lessons before starting the test. Do you still want to proceed with the test?</b>
-    </p>
-    <button id="proceed" type="button"  class="btn btn-primary btn-lg gapTop">Yes</button>
-    <button id="stay" type="button" class="btn btn-primary btn-lg gapTop">No</button>
-</div>
+</body>
 {% endblock %}

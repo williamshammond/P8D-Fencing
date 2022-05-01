@@ -14,49 +14,51 @@ var lessons_complete = {{ lessons_complete }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.js" integrity="sha512-19TrqSGVSwaC2IDGHrD+tAkX59/w5cXy0BHDVwn7OJQXxavORhFSFM7DOO9soXKuo8O7gGNHiG9R2vFrXRBcTQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<div id="main-content">
-    <!-- Lesson Header-->
-    <div class = "row titleRow">
-        <div class = "col-md-12">
-            {{ lesson.header }}
+<body class="stdFont">
+    <div id="main-content">
+        <!-- Lesson Header-->
+        <div class = "row titleRow">
+            <div class = "col-md-12">
+                {{ lesson.header }}
+            </div>
+            
         </div>
-        
+
+        <!-- Main Lesson Text Content-->
+        <div class = "row">
+            <div class = "col-md-12">
+                <pre class="regFontSize darkGray stdFont" id="lesson_text">{{ lesson.text }}</pre>
+            </div>
+        </div>
+
+        <!-- Div to display media content -->
+        <div class = "row">
+            <div class = "col-md-12">
+                {% for media in lesson.media %}
+                    <img src = "{{ media }}" class="stdMediaSize">
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Empty spaces for dynamically created button navigation -->
+        <div class = "row">
+            <div class = "col-md-2" id = "prevButton">
+            </div>
+            <div class = "col-md-8"></div>
+            <div class = "col-md-2" id = "nextButton">
+
+            </div>
+        </div>
+
     </div>
 
-    <!-- Main Lesson Text Content-->
-    <div class = "row">
-        <div class = "col-md-12">
-            <pre class="regFontSize darkGray" id="lesson_text">{{ lesson.text }}</pre>
-        </div>
+    <div id="options">
+        <p>
+            <b>We recommed that you review all lessons before starting the test. Do you still want to proceed with the test?</b>
+        </p>
+        <button id="proceed" type="button"  class="btn btn-primary btn-lg gapTop">Yes</button>
+        <button id="stay" type="button" class="btn btn-primary btn-lg gapTop">No</button>
     </div>
-
-    <!-- Div to display media content -->
-    <div class = "row">
-        <div class = "col-md-12">
-            {% for media in lesson.media %}
-                <img src = "{{ media }}" class="stdMediaSize">
-            {% endfor %}
-        </div>
-    </div>
-
-    <!-- Empty spaces for dynamically created button navigation -->
-    <div class = "row">
-        <div class = "col-md-2" id = "prevButton">
-        </div>
-        <div class = "col-md-8"></div>
-        <div class = "col-md-2" id = "nextButton">
-
-        </div>
-    </div>
-
-</div>
-
-<div id="options">
-    <p>
-        <b>We recommed that you review all lessons before starting the test. Do you still want to proceed with the test?</b>
-    </p>
-    <button id="proceed" type="button"  class="btn btn-primary btn-lg gapTop">Yes</button>
-    <button id="stay" type="button" class="btn btn-primary btn-lg gapTop">No</button>
-</div>
+</body>
 {% endblock %}
 

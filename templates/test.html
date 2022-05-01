@@ -12,53 +12,56 @@ Fencing101 | Test
 
 <script src = "{{url_for('static', filename = 'test.js')}}"></script>
 
-<div class = "row titlerow">
-    <div class = "col-md-12 center questionNumber">
-       Question {{ question.question_number }}/16
+<body class="stdFont">
+    
+    <div class = "row titlerow">
+        <div class = "col-md-12 center questionNumber">
+           Question {{ question.question_number }}/16
+        </div>
     </div>
-</div>
 
-<!-- Question content (actual question) -->
-<div class = "row lpad">
-    <div class = "col-md-12">
-        <pre class="regFontSize center darkGray">{{ question.question }}</pre>
+    <!-- Question content (actual question) -->
+    <div class = "row lpad">
+        <div class = "col-md-12">
+            <pre class="regFontSize center darkGray stdFont">{{ question.question }}</pre>
+        </div>
     </div>
-</div>
 
 
-<!-- Question media or text (One or the other)-->
-<div class = "row lpad">
-    <div class = "col-md-12">
-        {% if question.question_type == "media" %}
-            <img src = "{{ question.media }}" class="stdMediaSize">
-        {% else %}
-            <pre class="regFontSize">{{ question.text }}</pre>
-        {% endif %}
+    <!-- Question media or text (One or the other)-->
+    <div class = "row lpad">
+        <div class = "col-md-12">
+            {% if question.question_type == "media" %}
+                <img src = "{{ question.media }}" class="stdMediaSize">
+            {% else %}
+                <pre class="regFontSize darkGray stdFont">{{ question.text }}</pre>
+            {% endif %}
+        </div>
     </div>
-</div>
 
-<!-- Place holder divs for dynamically created buttons -->
-<div class = "row">
-    <div class = "col-md-4 center" id = "option1">
-        
+    <!-- Place holder divs for dynamically created buttons -->
+    <div class = "row">
+        <div class = "col-md-4 center" id = "option1">
+            
+        </div>
+        <div class = "col-md-4 center" id = "option2">
+            
+        </div>
+        <div class = "col-md-4 center" id = "option3">
+            
+        </div>
     </div>
-    <div class = "col-md-4 center" id = "option2">
-        
+
+
+    <!-- Empty space for dynamically added answer result -->
+    <div class = "row">
+        <div class = "col-md-12" id = "answerCheck"></div>
     </div>
-    <div class = "col-md-4 center" id = "option3">
-        
+
+
+    <!-- Empty space for dynamically added next button -->
+    <div class = "row">
+        <div class = "col-md-12" id = "nextButton"></div>
     </div>
-</div>
-
-
-<!-- Empty space for dynamically added answer result -->
-<div class = "row">
-    <div class = "col-md-12" id = "answerCheck"></div>
-</div>
-
-
-<!-- Empty space for dynamically added next button -->
-<div class = "row">
-    <div class = "col-md-12" id = "nextButton"></div>
-</div>
+</body>
 {% endblock %}
