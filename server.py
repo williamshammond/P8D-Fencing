@@ -152,7 +152,7 @@ lessons = {
         "lesson_id":"16",
         "subgroup":"priority",
         "header":"Priority",
-        "text":"Often in fencing, both fencers land a touch at nearly the same time.\n The fencer that gets the point is not the first fencer to hit but rather the fencer with priority",
+        "text":"Often in fencing, both fencers land a touch at nearly the same time.\nThe fencer that gets the point is not the first fencer to hit but rather\nthe fencer with priority",
         "media":["https://imgur.com/ZrMrv6Y.gif"],
         "keywords":["nearly the same time", "priority"],
         "next_lesson":"17",
@@ -161,7 +161,7 @@ lessons = {
         "lesson_id":"17",
         "subgroup":"priority",
         "header":"Priority",
-        "text":"The fencer with priority gets the point, even if both fencers land a touch.\n Press next to learn which fencer gets priority",
+        "text":"The fencer with priority gets the point, even if both fencers land a touch.\nPress next to learn which fencer gets priority",
         "media":["https://imgur.com/ZrMrv6Y.gif"],
         "keywords":["priority", "which fencer gets priority"],
         "next_lesson":"18",
@@ -169,7 +169,7 @@ lessons = {
     "18":{
         "lesson_id":"18",
         "subgroup":"priority",
-        "header":"Priority",
+        "header":"Priority — Attack",
         "text":"An attack has priority over a counter-attack",
         "media":["https://imgur.com/fbYcaAA.gif"],
         "keywords":["attack", "counter-attack"],
@@ -178,7 +178,7 @@ lessons = {
     "19":{
         "lesson_id":"19",
         "subgroup":"priority",
-        "header":"Priority",
+        "header":"Priority — Riposte",
         "text":"A riposte has priority over a second attempt to hit after a previous attempt missed or was parried",
         "media":["https://imgur.com/7EMExTa.gif"],
         "keywords":["riposte", "second attempt"],
@@ -187,7 +187,7 @@ lessons = {
     "20":{
         "lesson_id":"20",
         "subgroup":"priority",
-        "header":"Priority",
+        "header":"Priority — Point-in-Line",
         "text":"A point-in-line has priority over an offensive action if it was in place before that action started",
         "media":["https://imgur.com/x62vpHX.gif"],
         "keywords":["point-in-line", "offensive action"],
@@ -196,7 +196,7 @@ lessons = {
     "21":{
         "lesson_id":"21",
         "subgroup":"priority",
-        "header":"Priority",
+        "header":"Priority — Beat",
         "text":"An attack made with a beat has priority over an attack made without a beat",
         "media":["https://imgur.com/2pDjnd9.gif"],
         "keywords":["with a beat", "attack made without a beat"],
@@ -205,7 +205,7 @@ lessons = {
     "22":{
         "lesson_id":"22",
         "subgroup":"priority",
-        "header":"Priority",
+        "header":"Priority — Tie",
         "text":"If both fencers make an attack at the same time then neither action has priority.",
         "media":["https://imgur.com/U5mzfqj.gif"],
         "keywords":["attack at the same time"],
