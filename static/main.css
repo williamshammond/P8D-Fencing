@@ -151,7 +151,12 @@ mark{
     color:#262626;
 }
 
-
+.questionNumber{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #262626;
+}
 
 .homePageImgHolder{
     height: 200px;
