@@ -3,7 +3,7 @@
 Primary blue (banner, selections, text highlight): #4285f4
 Secondary blue closer to teal (buttons, ): #007ce8
 Light grey (hover on elements): #f7f7f7
-Dark grey (home text, ); #262626
+Dark grey (home text, ); #696969
 
 /*---------- Html Elements ----------*/
 img{
@@ -19,6 +19,10 @@ a.noUnderline{
 
 
 /* ---------- Basic Classes / Small Styling ---------*/
+
+.darkGray{
+    color: #696969;
+}
 
 .center{
     text-align: center;
