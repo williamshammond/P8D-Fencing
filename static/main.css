@@ -130,6 +130,10 @@ mark{
     margin-top: 20px;
 }
 
+#lesson_text{
+    overflow: hidden;
+}
+
 /*---------- Div Class Styling ----------*/
 .navbar-custom{
     background-color: #4285f4;
