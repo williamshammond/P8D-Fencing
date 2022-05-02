@@ -21,7 +21,7 @@ a.noUnderline{
 /* ---------- Basic Classes / Small Styling ---------*/
 
 .stdFont{
-    font-family: arial-black;
+    font-family: arial-black, "Arial Black";
 }
 
 .darkGray{

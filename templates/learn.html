@@ -31,33 +31,34 @@ var lessons_complete = {{ lessons_complete }}
             </div>
         </div>
 
-    <!-- Div to display media content -->
-    <div class = "row">
-        <div class = "col-md-12">
-            {% for key in lesson.media %}
-                {% if key == "gif" %}
-                    <div class = "gifHolder">
-                        <img src = "{{ lesson.media[key] }}" class = "gif learnMediaSize">
-                    </div>
-                {% elif key == "image"  %}
-                    <div class = "imageHolder">
-                        <img src = "{{ lesson.media[key] }}" class = "learnMediaSize">
-                    </div>
+        <!-- Div to display media content -->
+        <div class = "row">
+            <div class = "col-md-12">
+                {% for key in lesson.media %}
+                    {% if key == "gif" %}
+                        <div class = "gifHolder">
+                            <img src = "{{ lesson.media[key] }}" class = "gif learnMediaSize">
+                        </div>
+                    {% elif key == "image"  %}
+                        <div class = "imageHolder">
+                            <img src = "{{ lesson.media[key] }}" class = "learnMediaSize">
+                        </div>
+                        
+                    {% endif %}
                     
-                {% endif %}
-                
-            {% endfor %}
+                {% endfor %}
+            </div>
+
         </div>
 
-    </div>
+        <!-- Empty spaces for dynamically created button navigation -->
+        <div class = "row">
+            <div class = "col-md-2" id = "prevButton">
+            </div>
+            <div class = "col-md-8"></div>
+            <div class = "col-md-2" id = "nextButton">
 
-    <!-- Empty spaces for dynamically created button navigation -->
-    <div class = "row">
-        <div class = "col-md-2" id = "prevButton">
-        </div>
-        <div class = "col-md-8"></div>
-        <div class = "col-md-2" id = "nextButton">
-
+            </div>
         </div>
     </div>
 
