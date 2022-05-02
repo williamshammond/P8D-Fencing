@@ -4,6 +4,11 @@
 
 <script>
     var score = {{ score | tojson }}
+    
+    $(".test-button").click(function (e) { 
+        let goTo = "/test/" + "1"
+        window.location = (goTo)    
+    });    
 </script>
 
 <body class="stdFont darkGray">
