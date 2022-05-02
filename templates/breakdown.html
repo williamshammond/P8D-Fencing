@@ -26,7 +26,7 @@
                         <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/cartoonFencers.png')}}">
                     </div>
                     <div class = "center homePageLink">
-                        Basics: {{score.basics}}/4
+                        Basics: {{score.basics}}/2
                     </div>
                 </div> 
             </a>
@@ -50,7 +50,7 @@
                         <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/tiedFencers.jpeg')}}">
                     </div>
                     <div class = "center homePageLink">
-                        Priority: {{score.priority}}/9
+                        Priority: {{score.priority}}/11
                     </div>
                 </div>
             </a>
@@ -58,7 +58,13 @@
     </div>
 
     <div class = "row">
-        <div class = "col-md-12 center gaptop">
+        <div class = "col-md-12 center regFontSize darkGrey">
+            Your best category was <mark>{{ maxCategory }}</mark>! Looks like you could use the most practice with <mark>{{ minCategory }}</mark>. Click on any category to practice it again.
+        </div>
+    </div>
+
+    <div class = "row">
+        <div class = "col-md-12 center gapTop">
             <a href="{{ url_for('home')}}" class="btn btn-primary btn-lg" role="button" aria-disabled="true">Return Home</a>
         </div>
     </div>

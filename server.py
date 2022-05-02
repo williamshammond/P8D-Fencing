@@ -241,8 +241,8 @@ quizzes = {
         "subgroup":"basics",
         "question":"Which of the following MUST a fencer wear as protection?",
         "media":"NONE",
-        "options":["Goggles", "Helmet", "Mouthguard"],
-        "answer":"Helmet",
+        "options":["Goggles", "Mask", "Mouthguard"],
+        "answer":"Mask",
         "answer_idx": "1",
         "next_question":"3",
     },
@@ -460,7 +460,8 @@ def results():
 
 @app.route('/breakdown')
 def breakdown():
-    return render_template('breakdown.html', score = userScores["testUser"])
+    scorePercents, minCategory, maxCategory = findBestAndWorstCategory("testUser")
+    return render_template('breakdown.html', score = userScores["testUser"], percents = scorePercents, minCategory = minCategory, maxCategory = maxCategory)
 
 def reset_visited():
     global lessons_visited
@@ -483,6 +484,35 @@ def reset_score(user):
         "moves":0,
         "priority":0,
     }
+
+def findBestAndWorstCategory(user):
+    #Change these if the number of questions per category changes
+    BASICS = 2
+    MOVES = 3
+    PRIORITY = 9
+
+    scorePercents = {}
+    singleUserScore = userScores[user]
+
+    scorePercents["basics"] = singleUserScore["basics"] / BASICS
+    scorePercents["moves"] = singleUserScore["moves"] / MOVES
+    scorePercents["priority"] = singleUserScore["priority"] / PRIORITY
+
+    minScore = 1
+    maxScore = 0
+    minCategory = "basics"
+    maxCategory = "priority"
+    for category, score in scorePercents.items():
+        if score < minScore:
+            minScore = score
+            minCategory = category
+        if score > maxScore:
+            maxScore = score
+            maxCategory = category
+
+    return scorePercents, minCategory, maxCategory
+
+
 
 if __name__ == '__main__':
    reset_visited()
