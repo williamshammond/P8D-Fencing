@@ -444,7 +444,7 @@ def updatescore():
         user = json_data["user"]
         updatedScore = json_data["score"]
         subgroup = json_data["subgroup"]
-        userScores[user]["total"] = updatedScore
+        userScores[user]["total"] += 1
         userScores[user][subgroup] += 1
 
     return jsonify(score = updatedScore)
