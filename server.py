@@ -453,7 +453,9 @@ def updatescore():
         
 @app.route('/results')
 def results():
-    return render_template('results.html', score = userScores["testUser"])
+    userScore = 0
+
+    return render_template('results.html', score = userScores["testUser"]["total"])
 
 
 @app.route('/breakdown')
