@@ -10,7 +10,13 @@ from matplotlib.pyplot import title
 from pandas import to_datetime
 app = Flask(__name__)
 
-userScores = {"testUser": 0}
+userScores = {"testUser": {
+    "total":0,
+    "basics":0,
+    "moves":0,
+    "priority":0,
+    }
+}
 
 lessons = {
     "1":{
@@ -437,8 +443,9 @@ def updatescore():
         json_data = request.get_json()
         user = json_data["user"]
         updatedScore = json_data["score"]
-
-        userScores[user] = updatedScore
+        subgroup = json_data["subgroup"]
+        userScores[user]["total"] = updatedScore
+        userScores[user][subgroup] += 1
 
     return jsonify(score = updatedScore)
         
