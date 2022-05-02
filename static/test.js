@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     let button1 = $(`<button type="button" class="btn btn-primary btn-lg">${answers["0"]}</button>`);
     let button2 = $(`<button type="button" class="btn btn-primary btn-lg">${answers["1"]}</button>`);
-    let button3 = $(`<button type="button" class="btn btn-primary btn-lg paddingTop">${answers["2"]}</button>`);
+    let button3 = $(`<button type="button" class="btn btn-primary btn-lg topPad">${answers["2"]}</button>`);
 
     $(".test-button").click(function (e) { 
         let goTo = "/test/" + "1"

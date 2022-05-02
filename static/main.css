@@ -47,12 +47,13 @@ a.noUnderline{
     font-size: 20px;
 }
 
-.lpad{
+.bottomPad{
     padding-bottom: 10px;
 }
-.tpad{
+.topPad{
     padding-top: 10px;
 }
+
 
 .stdMediaSize{
     width: 50%;
@@ -127,7 +128,6 @@ mark{
     font-size: 25px;
     font-weight: bold;
     margin-top: 20px;
-    margin-left: 20px;
 }
 
 /*---------- Div Class Styling ----------*/

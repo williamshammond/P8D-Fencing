@@ -21,7 +21,7 @@ Fencing101 | Test
     </div>
 
     <!-- Question content (actual question) -->
-    <div class = "row lpad">
+    <div class = "row bottomPad">
         <div class = "col-md-12">
             <pre class="regFontSize center darkGray stdFont">{{ question.question }}</pre>
         </div>
@@ -29,7 +29,7 @@ Fencing101 | Test
 
 
     <!-- Question media or text (One or the other)-->
-    <div class = "row lpad">
+    <div class = "row bottomPad">
         <div class = "col-md-12">
             {% if question.question_type == "media" %}
                 <img src = "{{ question.media }}" class="stdMediaSize">
@@ -55,13 +55,13 @@ Fencing101 | Test
 
     <!-- Empty space for dynamically added answer result -->
     <div class = "row">
-        <div class = "col-md-12" id = "answerCheck"></div>
+        <div class = "col-md-12 center rightPad" id = "answerCheck"></div>
     </div>
 
 
     <!-- Empty space for dynamically added next button -->
     <div class = "row">
-        <div class = "col-md-12" id = "nextButton"></div>
+        <div class = "col-md-12 center" id = "nextButton"></div>
     </div>
 </body>
 {% endblock %}
