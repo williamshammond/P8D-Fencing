@@ -37,12 +37,12 @@ $(document).ready(function(){
     function addHover(){
         $(".gif").hover(function(){
             $(this).attr("src",lesson["media"]["slowgif"]);
-            $(".gifHolder").addClass("gifHolderBlue");
+            $(".gifHolder").addClass("secondaryBlue");
             console.log("in");
         }, function(){
             console.log("out");
             $(this).attr("src",lesson["media"]["gif"]);
-            $(".gifHolder").removeClass("gifHolderBlue");
+            $(".gifHolder").removeClass("secondaryBlue");
         })
     }
 

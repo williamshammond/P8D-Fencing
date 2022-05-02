@@ -37,10 +37,13 @@ var lessons_complete = {{ lessons_complete }}
             {% for key in lesson.media %}
                 {% if key == "gif" %}
                     <div class = "gifHolder">
-                        <img src = "{{ lesson.media[key] }}" class = "gif">
+                        <img src = "{{ lesson.media[key] }}" class = "gif learnMediaSize">
                     </div>
                 {% elif key == "image"  %}
-                    <img src = "{{ lesson.media[key] }}">
+                    <div class = "imageHolder">
+                        <img src = "{{ lesson.media[key] }}" class = "learnMediaSize">
+                    </div>
+                    
                 {% endif %}
                 
             {% endfor %}

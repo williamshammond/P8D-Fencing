@@ -1,7 +1,7 @@
 /*---------- SITE THEME (Can be changed) ----------*/
 /*
 Primary blue (banner, selections, text highlight): #4285f4
-Secondary blue closer to teal (buttons, ): #007ce8
+Light blue blue closer to teal (buttons, ): #007ce8
 Light grey (hover on elements): #f7f7f7
 Dark grey (home text, ); #696969
 
@@ -59,12 +59,18 @@ a.noUnderline{
     margin: auto;
     display: block;
 }
+
+.learnMediaSize{
+    width: 100%;
+    margin: auto;
+    display: block;
+}
 .primaryBlue{
     background-color: #4285f4;
 }
 
 .secondaryBlue{
-    background-color: #007ce8;
+    background-color: #c1e1f5;
 }
 
 .whiteText{
@@ -182,8 +188,7 @@ mark{
     width: 100%;
 }
 
-
-.gifHolder{
+.imageHolder{
     width: 650px;
     height: 350px;
     margin: 0 auto;
@@ -192,8 +197,13 @@ mark{
     align-items: center;
 }
 
-.gifHolderBlue{
-    background-color: #c1e1f5;
+.gifHolder{
+    width: 650px;
+    height: 350px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .gif{
