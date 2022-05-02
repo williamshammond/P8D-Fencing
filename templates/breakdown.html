@@ -2,6 +2,10 @@
 
 {% block content %}
 
+<script>
+    var score = {{ score | tojson }}
+</script>
+
 <body class="stdFont darkGray">
     
     <div class = "row" id="homerow">
@@ -17,7 +21,7 @@
                         <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/cartoonFencers.png')}}">
                     </div>
                     <div class = "center homePageLink">
-                        Basics: 4/4
+                        Basics: {{score.basics}}/4
                     </div>
                 </div> 
             </a>
@@ -29,7 +33,7 @@
                         <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/cartoonBlocking.png')}}">
                     </div>
                     <div class = "center homePageLink">
-                        Moves: 2/3
+                        Moves: {{score.moves}}/3
                     </div>
                 </div>
             </a>
@@ -41,7 +45,7 @@
                         <img class = "homePage" alttext = "Two Fencers Facing Off" id = "topbanner" src = "{{url_for('static', filename='images/tiedFencers.jpeg')}}">
                     </div>
                     <div class = "center homePageLink">
-                        Priority: 7/9
+                        Priority: {{score.priority}}/9
                     </div>
                 </div>
             </a>

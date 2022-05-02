@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
+<script>
+    var score = {{ score | tojson }}
+    console.log(score)
+</script>
+
 <body class="stdFont darkGray">
         
     <div class = "row">
@@ -10,7 +15,7 @@
     </div>
     <div class = "row">
         <div class = "col-md-12" id = "scoreResult">
-            Score: {{ score }}/16
+            Score: {{ score.total }}/16
         </div>
     </div>
 
