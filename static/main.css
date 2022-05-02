@@ -1,9 +1,9 @@
 /*---------- SITE THEME (Can be changed) ----------*/
 /*
 Primary blue (banner, selections, text highlight): #4285f4
-Light blue blue closer to teal (buttons, ): #007ce8
+Light blue (hover gifs, ): #c1e1f5
 Light grey (hover on elements): #f7f7f7
-Dark grey (home text, ); #696969
+Dark grey (home text, lesson text, most text ); #696969
 
 /*---------- Html Elements ----------*/
 img{
@@ -24,8 +24,11 @@ a.noUnderline{
     font-family: arial-black, "Arial Black";
 }
 
-.darkGray{
+.darkGrey{
     color: #696969;
+}
+.lightGrey{
+    color: #f7f7f7;
 }
 
 .center{
@@ -100,7 +103,7 @@ mark{
 
 #homeText{
     font-size: 30px;
-    color: #363636;
+    color: #696969;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -140,7 +143,7 @@ mark{
 }
 
 .navbar-custom .navbar-brand{
-    color: white;
+    color: #c1e1f5;
 }
 .navbar-custom .nav-link {
     color: white;

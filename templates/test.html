@@ -23,7 +23,7 @@ Fencing101 | Test
     <!-- Question content (actual question) -->
     <div class = "row bottomPad">
         <div class = "col-md-12">
-            <pre class="regFontSize center darkGray stdFont">{{ question.question }}</pre>
+            <pre class="regFontSize center darkGrey stdFont">{{ question.question }}</pre>
         </div>
     </div>
 
@@ -34,7 +34,7 @@ Fencing101 | Test
             {% if question.question_type == "media" %}
                 <img src = "{{ question.media }}" class="stdMediaSize">
             {% else %}
-                <pre class="regFontSize darkGray stdFont">{{ question.text }}</pre>
+                <pre class="regFontSize darkGrey stdFont">{{ question.text }}</pre>
             {% endif %}
         </div>
     </div>
