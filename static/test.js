@@ -29,15 +29,18 @@ $(document).ready(function(){
     $("#option2").append(button2);
     $("#option3").append(button3);
 
+    let subgroup = question["subgroup"];
+
     function updateScore(score){
         $.ajax({
             type: "POST",
             url: "/updatescore",
             dataType: "json",
             contentType: "application/json; charset=utf-8",
-            data: JSON.stringify({"score":score,"user":"testUser"}),
+            data: JSON.stringify({"score":score,"user":"testUser", "subgroup":subgroup}),
             success: function(result){
                 console.log(result);
+                console.log(subgroup);
             },
             error: function(request, status, error){
                 console.log("Error");
