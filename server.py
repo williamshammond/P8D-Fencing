@@ -431,6 +431,8 @@ def learningCategory(category):
 
 @app.route('/test/<id>')
 def test(id):
+    if(str(id) == "1"):
+        reset_score("testUser")
     question = quizzes[id]
     return render_template('test.html', question = question, score = userScores["testUser"])
 
@@ -453,8 +455,6 @@ def updatescore():
         
 @app.route('/results')
 def results():
-    userScore = 0
-
     return render_template('results.html', score = userScores["testUser"]["total"])
 
 
@@ -474,6 +474,15 @@ def are_lessons_complete():
         lessons_complete = "true"
     else:
         lessons_complete = "false"
+
+def reset_score(user):
+    global userScores
+    userScores[user] = {
+        "total":0,
+        "basics":0,
+        "moves":0,
+        "priority":0,
+    }
 
 if __name__ == '__main__':
    reset_visited()

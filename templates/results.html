@@ -3,11 +3,13 @@
 {% block content %}
 <script>
     var score = {{ score | tojson }}
-    
+
     $(".test-button").click(function (e) { 
         let goTo = "/test/" + "1"
         window.location = (goTo)    
     });
+
+    console.log(score)
 </script>
 
 <body class="stdFont darkGray">
@@ -19,7 +21,7 @@
     </div>
     <div class = "row">
         <div class = "col-md-12" id = "scoreResult">
-            Score: {{ score.total }}/16
+            Score: {{score}}/16
         </div>
     </div>
 
