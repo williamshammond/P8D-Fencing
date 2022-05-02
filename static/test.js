@@ -14,15 +14,15 @@ $(document).ready(function(){
     });    
 
     button1.click(function(){
-       checkAnswer(button1.text(), correctAnswer); 
+       checkAnswer(button1, correctAnswer); 
     })
 
     button2.click(function(){
-        checkAnswer(button2.text(), correctAnswer); 
+        checkAnswer(button2, correctAnswer); 
     })
      
     button3.click(function(){
-        checkAnswer(button3.text(), correctAnswer); 
+        checkAnswer(button3, correctAnswer); 
     })
 
     $("#option1").append(button1);
@@ -51,12 +51,15 @@ $(document).ready(function(){
         }
     )}
     
-    function checkAnswer(chosenAnswer, correctAnswer){
-        questionAnswered = $("#answerCheck").text() != "";
+    function checkAnswer(clickedButton, correctAnswer){
+        let questionAnswered = $("#answerCheck").text() != "";
+
+        let chosenAnswer = clickedButton.text();
 
         if(!questionAnswered && chosenAnswer == correctAnswer){
             $("#answerCheck").append("<p>Correct<p>");
-            $("#answerCheck").addClass("green")
+            $("#answerCheck").addClass("green");
+            clickedButton.addClass("greenBackground");
             addNextButton();
             updateScore(score + 1);
         }
@@ -64,6 +67,7 @@ $(document).ready(function(){
             $("#answerCheck").append("<p>Incorrect<p>");
             $("#answerCheck").append(`<p>The correct answer was: ${correctAnswer}<p>`);
             $("#answerCheck").addClass("red")
+            clickedButton.addClass("redBackground");
             addNextButton();
         }
         

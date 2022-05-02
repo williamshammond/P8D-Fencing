@@ -57,6 +57,19 @@ a.noUnderline{
     padding-top: 10px;
 }
 
+.greenBackground{
+    background-color: green;
+}
+.greenBackground:hover{
+    background-color: green;
+}
+
+.redBackground{
+    background-color: red;
+}
+.redBackground:hover{
+    background-color: red;
+}
 
 .stdMediaSize{
     width: 50%;
