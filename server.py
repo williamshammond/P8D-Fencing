@@ -108,7 +108,7 @@ lessons = {
         "subgroup":"moves",
         "header":"Moves — Strike",        
         "text":"A strike is the initial offensive action made by extending the arm and continuously threatening the opponent's target",
-        "media":["https://imgur.com/pLG98vy.gif"],
+        "media":{"gif":"https://imgur.com/pLG98vy.gif","slowgif":"https://i.imgur.com/2hmNKGh.gif"},
         "keywords":["strike"],
         "next_lesson":"12",
     },

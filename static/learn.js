@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+
     
     let lessonNumber = lesson["lesson_id"];
     let keywords = lesson["keywords"];
@@ -31,7 +33,24 @@ $(document).ready(function(){
     $("#nextButton").append(`<a href="${nextLink}" class="btn btn-primary btn-lg gapTop" role="button" aria-disabled="true">${nextText}</a>`);
     highlight_keywords(keywords);
     add_click_events();
+
+    function addHover(){
+        $(".gif").hover(function(){
+            $(this).attr("src",lesson["media"]["gif"]);
+            $(".gifHolder").addClass("gifHolderBlue");
+            console.log("in");
+        }, function(){
+            console.log("out");
+            $(this).attr("src",lesson["media"]["slowgif"]);
+            $(".gifHolder").removeClass("gifHolderBlue");
+        })
+    }
+
+    addHover();
+
+    
 })
+
 
 
 function highlight_keywords(keywords) {

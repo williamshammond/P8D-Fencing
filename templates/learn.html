@@ -31,25 +31,31 @@ var lessons_complete = {{ lessons_complete }}
             </div>
         </div>
 
-        <!-- Div to display media content -->
-        <div class = "row">
-            <div class = "col-md-12">
-                {% for media in lesson.media %}
-                    <img src = "{{ media }}" class="stdMediaSize">
-                {% endfor %}
-            </div>
+    <!-- Div to display media content -->
+    <div class = "row">
+        <div class = "col-md-12">
+            {% for key in lesson.media %}
+                {% if key == "gif" %}
+                    <div class = "gifHolder">
+                        <img src = "{{ lesson.media[key] }}" class = "gif">
+                    </div>
+                {% elif key == "pic"  %}
+                    <img src = "{{ lesson.media[key] }}">
+                {% endif %}
+                
+            {% endfor %}
         </div>
 
-        <!-- Empty spaces for dynamically created button navigation -->
-        <div class = "row">
-            <div class = "col-md-2" id = "prevButton">
-            </div>
-            <div class = "col-md-8"></div>
-            <div class = "col-md-2" id = "nextButton">
+    </div>
 
-            </div>
+    <!-- Empty spaces for dynamically created button navigation -->
+    <div class = "row">
+        <div class = "col-md-2" id = "prevButton">
         </div>
+        <div class = "col-md-8"></div>
+        <div class = "col-md-2" id = "nextButton">
 
+        </div>
     </div>
 
     <div id="options">
