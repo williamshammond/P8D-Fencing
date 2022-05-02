@@ -250,6 +250,7 @@ mark{
     margin: 100px auto;
     margin-top: 15%;
     border: 2px solid black;
+    border-radius: 10px;
     text-align: center;
     left: 50%;
     top: 100px;

@@ -17,65 +17,69 @@ var lessons_complete = {{ lessons_complete }}
 <body class="stdFont">
     <div id="main-content">
         <!-- Lesson Header-->
-        <div class = "row titleRow">
-            <div class = "col-md-12">
-                {{ lesson.header }}
-            </div>
-            
-        </div>
-
-        <!-- Main Lesson Text Content-->
-        <div class = "row">
-            <div class = "col-md-12">
-                <pre class="regFontSize darkGrey stdFont" id="lesson_text">{{ lesson.text }}</pre>
-            </div>
-        </div>
-
-    <!-- Div to display media content -->
-    <div class = "row">
-        <div class = "col-md-12">
-            {% for key in lesson.media %}
-                {% if key == "gif" %}
-                    <div class = "gifHolder">
-                        <img src = "{{ lesson.media[key] }}" class = "gif learnMediaSize">
-                    </div>
-                {% elif key == "image"  %}
-                    <div class = "imageHolder">
-                        <img src = "{{ lesson.media[key] }}" class = "learnMediaSize">
-                    </div>
-                    
-                {% endif %}
+            <div class = "row titleRow">
+                <div class = "col-md-12">
+                    {{ lesson.header }}
+                </div>
                 
-            {% endfor %}
+            </div>
+
+            <!-- Main Lesson Text Content-->
+            <div class = "row">
+                <div class = "col-md-12">
+                    <pre class="regFontSize darkGrey stdFont" id="lesson_text">{{ lesson.text }}</pre>
+                </div>
+            </div>
+
+        <!-- Div to display media content -->
+        <div class = "row">
+            <div class = "col-md-12">
+                {% for key in lesson.media %}
+                    {% if key == "gif" %}
+                        <div class = "gifHolder">
+                            <img src = "{{ lesson.media[key] }}" class = "gif learnMediaSize">
+                        </div>
+                    {% elif key == "image"  %}
+                        <div class = "imageHolder">
+                            <img src = "{{ lesson.media[key] }}" class = "learnMediaSize">
+                        </div>
+                        
+                    {% endif %}
+                    
+                {% endfor %}
+            </div>
+
         </div>
 
-    </div>
+        {% if lesson.lesson_id == "11" or lesson.lesson_id == "16" %}
+            <div class = "row">
+                <div class = "col-md-12 center darkGrey">
+                    Hover over gifs to play at half speed
+                </div>
+            </div>
+        {% endif %}
 
-    {% if lesson.lesson_id == "11" or lesson.lesson_id == "16" %}
+        <!-- Empty spaces for dynamically created button navigation -->
         <div class = "row">
-            <div class = "col-md-12 center darkGrey">
-                Hover over gifs to play at half speed
+            <div class = "col-md-2" id = "prevButton">
+            </div>
+            <div class = "col-md-8"></div>
+            <div class = "col-md-2" id = "nextButton">
+
             </div>
         </div>
-    {% endif %}
 
-    <!-- Empty spaces for dynamically created button navigation -->
-    <div class = "row">
-        <div class = "col-md-2" id = "prevButton">
-        </div>
-        <div class = "col-md-8"></div>
-        <div class = "col-md-2" id = "nextButton">
-
-        </div>
     </div>
-
+    
     <div id="options">
         <p>
             <b>We recommed that you review all lessons before starting the test. Do you still want to proceed with the test?</b>
         </p>
         <button id="proceed" type="button"  class="btn btn-primary btn-lg gapTop">Yes</button>
         <button id="stay" type="button" class="btn btn-primary btn-lg gapTop">No</button>
-    </div>
+    </div>    
 </body>
+
+
 {% endblock %}
 
