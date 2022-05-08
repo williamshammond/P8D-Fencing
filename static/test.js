@@ -37,7 +37,7 @@ $(document).ready(function(){
             url: "/updatescore",
             dataType: "json",
             contentType: "application/json; charset=utf-8",
-            data: JSON.stringify({"score":score,"user":"testUser", "subgroup":subgroup}),
+            data: JSON.stringify({"score":score,"user":"testUser", "subgroup":subgroup, "id":questionNumber}),
             success: function(result){
                 console.log(result);
                 console.log(subgroup);

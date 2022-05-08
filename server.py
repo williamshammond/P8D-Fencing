@@ -221,6 +221,8 @@ lessons = {
 
 lessons_visited = []
 
+question_answered = []
+
 lessons_complete = "false"
 
 quizzes = {
@@ -433,7 +435,9 @@ def learningCategory(category):
 def test(id):
     if(str(id) == "1"):
         reset_score("testUser")
+        reset_quiz()
     question = quizzes[id]
+    print(userScores["testUser"])
     return render_template('test.html', question = question, score = userScores["testUser"])
 
 @app.route('/updatescore', methods = ["GET","POST"])
@@ -446,8 +450,11 @@ def updatescore():
         user = json_data["user"]
         updatedScore = json_data["score"]
         subgroup = json_data["subgroup"]
-        userScores[user]["total"] += 1
-        userScores[user][subgroup] += 1
+        id = int(json_data["id"])
+        if (question_answered[id - 1] == 0):
+            userScores[user]["total"] += 1
+            userScores[user][subgroup] += 1
+            question_answered[id - 1] = 1
 
     return jsonify(score = updatedScore)
         
@@ -468,6 +475,13 @@ def reset_visited():
     lessons_visited = []
     for i in lessons.items():
         lessons_visited.append(0)
+
+def reset_quiz():
+    global question_answered
+    question_answered = []
+    for i in quizzes.items():
+        question_answered.append(0)
+
 
 def are_lessons_complete():
     global lessons_complete
